@@ -1,7 +1,8 @@
 Summary:	suid, sgid file and directory checking
+Summary(pl):	sprawdza pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
@@ -22,6 +23,12 @@ reports the changes. You can also run this manually for spot checking.
 It tracks s[ug]id files by md5 checksums. This helps detect if your
 files have been tampered with, would not show under normal name and
 permissions checking. Directories are tracked by inodes.
+
+%description -l pl
+Ten program jest uruchamiany z crondaemon'a. ¦ledzi on zmiany w plikach
+i katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe, takie których
+jeszcze nie zna lub takie, które sie zmieni³y wtedy raportuje zmiany.
+Mo¿na go tak¿e uruchamiaæ rêcznie do natychmiastowych sprawdzeñ.
 
 %prep
 %setup -q
@@ -50,4 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 /etc/cron.daily/sxid
 %{_mandir}/*
-%config %{_sysconfdir}/%{name}.conf
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
