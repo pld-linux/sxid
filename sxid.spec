@@ -33,7 +33,7 @@ natychmiastowych sprawdzeñ.
 %setup -q
 
 %build
-autoconf
+%{__autoconf}
 %configure
 %{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
