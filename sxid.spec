@@ -1,12 +1,26 @@
 Summary:	suid, sgid file and directory checking
 Summary(pl):	sprawdza pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
-Version:	4.0.1
-Release:	2
+Version:	4.0.2
+Release:	1
 License:	GPL
 Group:		Applications/System
+Group(cs):	Aplikace/Systém
+Group(da):	Programmer/System
 Group(de):	Applikationen/System
+Group(es):	Aplicaciones/Sistema
+Group(fr):	Applications/Système
+Group(is):	Forrit/Kerfisforrit
+Group(it):	Applicazioni/Sistema
+Group(ja):	¥¢¥×¥ê¥±¡¼¥·¥ç¥ó/¥·¥¹¥Æ¥à
+Group(no):	Applikasjoner/System
 Group(pl):	Aplikacje/System
+Group(pt):	Aplicações/Sistema
+Group(pt_BR):	Aplicações/Sistema
+Group(ru):	ğÒÉÌÏÖÅÎÉÑ/óÉÓÔÅÍÁ
+Group(sl):	Programi/Sistem
+Group(sv):	Tillämpningar/System
+Group(uk):	ğÒÉËÌÁÄÎ¦ ğÒÏÇÒÁÍÉ/óÉÓÔÅÍÁ
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
 BuildRequires:	autoconf
 Requires:	crondaemon
@@ -25,10 +39,11 @@ files have been tampered with, would not show under normal name and
 permissions checking. Directories are tracked by inodes.
 
 %description -l pl
-Ten program jest uruchamiany z crondaemon'a. ¦ledzi on zmiany w plikach
-i katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe, takie których
-jeszcze nie zna lub takie, które sie zmieni³y wtedy raportuje zmiany.
-Mo¿na go tak¿e uruchamiaæ rêcznie do natychmiastowych sprawdzeñ.
+Ten program jest uruchamiany z crondaemon'a. ¦ledzi on zmiany w
+plikach i katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe,
+takie których jeszcze nie zna lub takie, które sie zmieni³y wtedy
+raportuje zmiany. Mo¿na go tak¿e uruchamiaæ rêcznie do
+natychmiastowych sprawdzeñ.
 
 %prep
 %setup -q
@@ -55,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.gz docs/sxid.conf.example.gz
 %attr(755,root,root) %{_bindir}/*
-/etc/cron.daily/sxid
+%attr(700,root,root) /etc/cron.daily/sxid
 %{_mandir}/*
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
