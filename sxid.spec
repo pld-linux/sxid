@@ -2,7 +2,7 @@ Summary:	suid, sgid file and directory checking
 Summary(pl):	Narzêdzie sprawdzaj±ce pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
