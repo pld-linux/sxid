@@ -2,7 +2,7 @@ Summary:	suid, sgid file and directory checking
 Summary(pl):	sprawdza pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
@@ -45,14 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/cron.daily
 install debian/cron.daily $RPM_BUILD_ROOT/etc/cron.daily/sxid
 
-gzip -9nf README docs/sxid.conf.example
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz docs/sxid.conf.example.gz
+%doc README docs/sxid.conf.example
 %attr(755,root,root) %{_bindir}/*
 %attr(700,root,root) /etc/cron.daily/sxid
 %{_mandir}/*
