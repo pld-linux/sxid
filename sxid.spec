@@ -5,22 +5,6 @@ Version:	4.0.2
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(cs):	Aplikace/Systém
-Group(da):	Programmer/System
-Group(de):	Applikationen/System
-Group(es):	Aplicaciones/Sistema
-Group(fr):	Applications/Système
-Group(is):	Forrit/Kerfisforrit
-Group(it):	Applicazioni/Sistema
-Group(ja):	¥¢¥×¥ê¥±¡¼¥·¥ç¥ó/¥·¥¹¥Æ¥à
-Group(no):	Applikasjoner/System
-Group(pl):	Aplikacje/System
-Group(pt):	Aplicações/Sistema
-Group(pt_BR):	Aplicações/Sistema
-Group(ru):	ğÒÉÌÏÖÅÎÉÑ/óÉÓÔÅÍÁ
-Group(sl):	Programi/Sistem
-Group(sv):	Tillämpningar/System
-Group(uk):	ğÒÉËÌÁÄÎ¦ ğÒÏÇÒÁÍÉ/óÉÓÔÅÍÁ
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
 BuildRequires:	autoconf
 Requires:	crondaemon
