@@ -1,8 +1,8 @@
 Summary:	suid, sgid file and directory checking
-Summary(pl):	sprawdza pliki i katalogi o atrybutach suid i sgid
+Summary(pl):	Narzêdzie sprawdzaj±ce pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
@@ -23,11 +23,11 @@ files have been tampered with, would not show under normal name and
 permissions checking. Directories are tracked by inodes.
 
 %description -l pl
-Ten program jest uruchamiany z crondaemon'a. ¦ledzi on zmiany w
-plikach i katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe,
-takie których jeszcze nie zna lub takie, które sie zmieni³y wtedy
-raportuje zmiany. Mo¿na go tak¿e uruchamiaæ rêcznie do
-natychmiastowych sprawdzeñ.
+Ten program jest uruchamiany z crona. ¦ledzi on zmiany w plikach i
+katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe, takie
+których jeszcze nie zna lub takie, które sie zmieni³y wtedy raportuje
+zmiany. Mo¿na go tak¿e uruchamiaæ rêcznie do natychmiastowego
+sprawdzenia.
 
 %prep
 %setup -q
@@ -35,7 +35,7 @@ natychmiastowych sprawdzeñ.
 %build
 %{__autoconf}
 %configure
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -53,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc README docs/sxid.conf.example
 %attr(755,root,root) %{_bindir}/*
 %attr(700,root,root) /etc/cron.daily/sxid
-%{_mandir}/*
+%{_mandir}/man?/*
 %attr(640,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}.conf
