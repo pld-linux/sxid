@@ -36,7 +36,7 @@ natychmiastowych sprawdzeñ.
 autoconf
 %configure
 %{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
- 
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
