@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
+# Source0-md5:	feedb01a5e93f8ba9f38a8054f3ef04b
 BuildRequires:	autoconf
 Requires:	crondaemon
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
