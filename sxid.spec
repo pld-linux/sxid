@@ -1,5 +1,5 @@
 Summary:	suid, sgid file and directory checking
-Summary(pl.UTF-8):   Narzędzie sprawdzające pliki i katalogi o atrybutach suid i sgid
+Summary(pl.UTF-8):	Narzędzie sprawdzające pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.2
 Release:	4
