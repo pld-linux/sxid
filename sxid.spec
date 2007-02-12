@@ -1,5 +1,5 @@
 Summary:	suid, sgid file and directory checking
-Summary(pl):	Narzêdzie sprawdzaj±ce pliki i katalogi o atrybutach suid i sgid
+Summary(pl.UTF-8):   NarzÄ™dzie sprawdzajÄ…ce pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.2
 Release:	4
@@ -23,11 +23,11 @@ It tracks s[ug]id files by md5 checksums. This helps detect if your
 files have been tampered with, would not show under normal name and
 permissions checking. Directories are tracked by inodes.
 
-%description -l pl
-Ten program jest uruchamiany z crona. ¦ledzi on zmiany w plikach i
-katalogach o atrybutach s[ug]id. Je¿eli pojawiaj± sie nowe, takie
-których jeszcze nie zna lub takie, które sie zmieni³y wtedy raportuje
-zmiany. Mo¿na go tak¿e uruchamiaæ rêcznie do natychmiastowego
+%description -l pl.UTF-8
+Ten program jest uruchamiany z crona. Åšledzi on zmiany w plikach i
+katalogach o atrybutach s[ug]id. JeÅ¼eli pojawiajÄ… sie nowe, takie
+ktÃ³rych jeszcze nie zna lub takie, ktÃ³re sie zmieniÅ‚y wtedy raportuje
+zmiany. MoÅ¼na go takÅ¼e uruchamiaÄ‡ rÄ™cznie do natychmiastowego
 sprawdzenia.
 
 %prep
