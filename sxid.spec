@@ -2,7 +2,7 @@ Summary:	suid, sgid file and directory checking
 Summary(pl.UTF-8):	Narzędzie sprawdzające pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
 Version:	4.0.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.phunnypharm.org/pub/sxid/%{name}_%{version}.tar.gz
@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README docs/sxid.conf.example
+%dir %{_sysconfdir}
 %attr(755,root,root) %{_bindir}/*
 %attr(700,root,root) /etc/cron.daily/sxid
 %{_mandir}/man?/*
