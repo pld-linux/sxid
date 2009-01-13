@@ -1,12 +1,13 @@
 Summary:	suid, sgid file and directory checking
 Summary(pl.UTF-8):	Narzędzie sprawdzające pliki i katalogi o atrybutach suid i sgid
 Name:		sxid
-Version:	4.0.2
-Release:	4
+Version:	4.0.4
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	ftp://marcus.seva.net/pub/sxid/%{name}_%{version}.tar.gz
-# Source0-md5:	feedb01a5e93f8ba9f38a8054f3ef04b
+Source0:	http://www.phunnypharm.org/pub/sxid/%{name}_%{version}.tar.gz
+# Source0-md5:	f85f1bf18651af14efd2b475b87e55b1
+URL:		http://www.phunnypharm.org/pub/sxid/
 BuildRequires:	autoconf
 Requires:	crondaemon
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
